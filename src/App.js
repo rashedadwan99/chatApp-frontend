@@ -11,7 +11,6 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/notFound" exact component={NotFoundPage} />
 
         <Route
           path="/chats"
@@ -27,6 +26,7 @@ function App() {
             else return <Redirect to="/chats" />;
           }}
         />
+        <Route path="/notFound" exact component={NotFoundPage} />
         <Redirect to="/notFound" />
       </Switch>
     </div>

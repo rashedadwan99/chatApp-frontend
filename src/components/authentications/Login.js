@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 import {
   Button,
   FormControl,
@@ -12,14 +11,14 @@ import {
 } from "@chakra-ui/react";
 import { login } from "../../services/userService";
 
-function Login({ location }) {
+function Login() {
   const [email, setEmail] = useState("");
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
   const [password, setPassword] = useState("");
 
   const toast = useToast();
-  const history = useHistory();
+
 
   const handleClick = () => {
     setShow(!show);
@@ -50,7 +49,7 @@ function Login({ location }) {
 
       localStorage.setItem("user", JSON.stringify(data));
 
-      window.location = "/chats";
+      // window.location = "/chats";
     } catch (error) {
       toast({
         title: "Error occoured",
