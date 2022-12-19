@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Switch>
 
-        <Route
+        {/* <Route
           path="/chats"
           render={(props) => {
             if (user) return <ChatPage {...props} />;
@@ -26,8 +26,11 @@ function App() {
             if (!user) return <HomePage {...props} />;
             else return <Redirect to="/chats" />;
           }}
-        />
+        /> */}
+
+        <Route path="/chats" exact component={ChatPage} />
         <Route path="/notFound" exact component={NotFoundPage} />
+        <Route path="/" exact component={HomePage} />
         <Redirect to="/notFound" />
       </Switch>
     </div>
