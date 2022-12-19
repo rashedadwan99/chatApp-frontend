@@ -20,7 +20,7 @@ import { getAllMessages, sendMessageHandler } from "../services/messageService";
 import ScrollableChat from "./ScrollableChat";
 import "./messages.css";
 
-const ENDPOINT = "https://talk-a-tive-f2ue.onrender.com";
+const ENDPOINT = "https://talk-a-tive-f2ue.onrender";
 let socket, selectedChatCompare;
 function SingleChat({ fetchAgain, setFetchAgain }) {
   const [messages, setMessages] = useState([]);
