@@ -49,7 +49,7 @@ function Login() {
 
       localStorage.setItem("user", JSON.stringify(data));
 
-      // window.location = "/chats";
+      window.location = "/chats";
     } catch (error) {
       toast({
         title: "Error occoured",

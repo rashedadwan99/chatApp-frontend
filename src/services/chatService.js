@@ -1,25 +1,26 @@
 import { http } from "./httpService";
-
+import config from "../config.json";
+const apiEndPoint = config.apiUrl + "/chats"
 export const handleAccessChat = async (userId) => {
-  return http.post("/api/chat", { userId });
+  return http.post(apiEndPoint, { userId });
 };
 
 export const getAllChats = () => {
-  return http.get("/api/chat");
+  return http.get(apiEndPoint);
 };
 
 export const createGroupChat = (users, name) => {
-  return http.post("/api/chat/group", { users, name });
+  return http.post(`${apiEndPoint}/group`, { users, name });
 };
 
 export const renameChatGroup = (chatId, name) => {
-  return http.put("/api/chat/rename", { chatId, name });
+  return http.put(`${apiEndPoint}/rename`, { chatId, name });
 };
 
 export const addUserToGroup = (chatId, userId) => {
-  return http.put("/api/chat/groupadd", { chatId, userId });
+  return http.put(`${apiEndPoint}/groupadd`, { chatId, userId });
 };
 
 export const removeUserFromGroup = (chatId, userId) => {
-  return http.put("/api/chat/groupremove", { chatId, userId });
+  return http.put(`${apiEndPoint}/groupremove`, { chatId, userId });
 };
