@@ -4,10 +4,10 @@ import ChatPage from "./pages/ChatPage";
 import HomePage from "./pages/HomePage";
 import "./App.css";
 import NotFoundPage from "./pages/NotFoundPage";
-import { ChatState } from "./context/chatProvider";
+
 
 function App() {
-  const { user } = ChatState()
+  const user = localStorage.getItem("user")
 
   return (
     <div className="App">
