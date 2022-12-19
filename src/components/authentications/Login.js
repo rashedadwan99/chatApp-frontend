@@ -9,6 +9,7 @@ import {
   useToast,
   VStack,
 } from "@chakra-ui/react";
+import { useHistory } from "react-router-dom";
 import { login } from "../../services/userService";
 
 function Login() {
@@ -16,10 +17,8 @@ function Login() {
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
   const [password, setPassword] = useState("");
-
   const toast = useToast();
-
-
+  const history = useHistory()
   const handleClick = () => {
     setShow(!show);
   };
@@ -49,7 +48,7 @@ function Login() {
 
       localStorage.setItem("user", JSON.stringify(data));
 
-      window.location = "/chats";
+      history.replaceState("/chats")
     } catch (error) {
       toast({
         title: "Error occoured",
