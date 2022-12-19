@@ -23,13 +23,7 @@ function App() {
             else return <Redirect to="/" />;
           }}
         />
-        <Route
-          path="/"
-          render={(props) => {
-            if (!isLoggedIn) return <HomePage {...props} />;
-            else return <Redirect to="/chats" />;
-          }}
-        />
+
 
 
 
