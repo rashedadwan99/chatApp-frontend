@@ -48,7 +48,7 @@ function Login() {
 
       localStorage.setItem("user", JSON.stringify(data));
 
-      history.replace("/chats")
+      history.push("/chats")
     } catch (error) {
       toast({
         title: "Error occoured",

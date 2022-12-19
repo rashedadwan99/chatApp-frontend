@@ -4,9 +4,10 @@ import ChatPage from "./pages/ChatPage";
 import HomePage from "./pages/HomePage";
 import "./App.css";
 import NotFoundPage from "./pages/NotFoundPage";
+import { ChatState } from "./context/chatProvider";
 
 function App() {
-  const user = localStorage.getItem("user");
+  const { user } = ChatState()
 
   return (
     <div className="App">
