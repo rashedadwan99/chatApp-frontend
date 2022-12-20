@@ -7,7 +7,7 @@ import MyChats from "../components/MyChats";
 import ChatBox from "../components/ChatBox";
 
 function ChatPage() {
-  const { user } = ChatState();
+  const user = JSON.parse(localStorage.getItem("user"));
   const [fetchAgain, setFetchAgain] = useState(false);
   return (
     <div style={{ width: "100%" }}>
