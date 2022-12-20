@@ -20,7 +20,7 @@ function HomePage({ location }) {
     if (!userInfo) {
       history.push("/");
     }
-  }, [history]);
+  }, []);
   return (
     <Container maxW="xl" centerContent>
       <Box
