@@ -104,7 +104,7 @@ function SignUp() {
       });
       localStorage.setItem("user", JSON.stringify(data));
       setLoading(false);
-      history.push("/chats");
+      window.location = "/chats";
     } catch (error) {
       toast({
         title: "Error occoured",
