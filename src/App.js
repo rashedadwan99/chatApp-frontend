@@ -15,7 +15,7 @@ function App() {
 
 
         <Route path="/" component={HomePage} exact />
-        <Route path="/#/chats" component={ChatPage} exact />
+        <Route path="/chats" component={ChatPage} exact />
       </Switch>
     </div>
   );
