@@ -14,8 +14,8 @@ function App() {
       <Switch>
 
 
-        <Route path="/" component={HomePage} exact />
-        <Route path="/chats" component={ChatPage} exact />
+        <Route path="https://talk-a-tive-f2ue.onrender.com/" component={HomePage} exact />
+        <Route path="https://talk-a-tive-f2ue.onrender.com/chats" component={ChatPage} exact />
       </Switch>
     </div>
   );
