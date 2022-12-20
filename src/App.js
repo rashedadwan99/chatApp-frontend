@@ -1,9 +1,9 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import ChatPage from "./pages/ChatPage";
 import HomePage from "./pages/HomePage";
 import "./App.css";
-import NotFoundPage from "./pages/NotFoundPage";
+
 
 
 function App() {
@@ -12,23 +12,10 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/notFound" exact component={NotFoundPage} />
-        <Route
-          path="/chats"
-          render={(props) =>
-            user ? <ChatPage {...props} /> :
-              <Redirect to="/" />
-          }
-        />
-        <Route
-          path="/"
-          render={(props) =>
-            !user ? <HomePage {...props} /> :
-              <Redirect to="/chats" />
-          }
-        />
 
-        <Redirect to="/notFound" />
+        <Route path="/" component={HomePage} exact />
+        <Route path="/chats" component={ChatPage} />
+
       </Switch>
     </div>
   );
