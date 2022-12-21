@@ -11,7 +11,7 @@ root.render(
   <BrowserRouter>
     <ChatProvider>
       <ChakraProvider>
-        <Route path="/*" component={<App />} />
+        <Route path="/*" component={App} />
       </ChakraProvider>
     </ChatProvider>
   </BrowserRouter>
