@@ -1,6 +1,6 @@
 import { http } from "./httpService";
-import config from "../config.json";
-const apiEndPoint = config.apiUrl + "/message"
+
+const apiEndPoint = "/message"
 export const sendMessageHandler = (content, chatId) => {
   return http.post(apiEndPoint, { chatId, content });
 };

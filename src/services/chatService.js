@@ -1,6 +1,5 @@
 import { http } from "./httpService";
-import config from "../config.json";
-const apiEndPoint = config.apiUrl + "/chat"
+const apiEndPoint = "/chat"
 export const handleAccessChat = async (userId) => {
   return http.post(apiEndPoint, { userId });
 };

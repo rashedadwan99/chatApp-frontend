@@ -1,6 +1,5 @@
 import { http } from "./httpService";
-import config from "../config.json";
-const apiEndPoint = config.apiUrl + "/user"
+const apiEndPoint = "/user"
 export const signUp = (data) => {
   return http.post(apiEndPoint, data);
 };
