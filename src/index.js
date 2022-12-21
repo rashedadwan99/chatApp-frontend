@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { ChakraProvider } from "@chakra-ui/react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import ChatProvider from "./context/chatProvider";
@@ -11,7 +11,7 @@ root.render(
   <BrowserRouter>
     <ChatProvider>
       <ChakraProvider>
-        <App />
+        <Route path="/*" component={<App />} />
       </ChakraProvider>
     </ChatProvider>
   </BrowserRouter>
