@@ -9,7 +9,6 @@ import {
   useToast,
   VStack,
 } from "@chakra-ui/react";
-import { useHistory } from "react-router-dom";
 import { login } from "../../services/userService";
 
 function Login() {
@@ -18,7 +17,6 @@ function Login() {
   const [loading, setLoading] = useState(false);
   const [password, setPassword] = useState("");
   const toast = useToast();
-  const history = useHistory()
   const handleClick = () => {
     setShow(!show);
   };

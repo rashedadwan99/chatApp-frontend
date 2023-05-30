@@ -41,9 +41,9 @@ function SignUp() {
     if (pic.type === "image/jpeg" || pic.type === "image/png ") {
       const data = new FormData();
       data.append("file", pic);
-      data.append("upload_preset", "chat app");
-      data.append("cloud_name", "dgbat9cg8");
-      fetch("https://api.cloudinary.com/v1_1/dgbat9cg8/image/upload", {
+      data.append("upload_preset", process.env.REACT_APP_UPLOAD_PRESET);
+      data.append("cloud_name", process.env.REACT_APP_CLOUD_NAME);
+      fetch(process.env.REACT_APP_CLOUDNINARY_API, {
         method: "post",
         body: data,
       })
